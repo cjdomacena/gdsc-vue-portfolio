@@ -1,8 +1,8 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> -
-    <router-link v-if="!currentUser" to="/register">Register</router-link> -
-    <router-link v-if="!currentUser" to="/login">Login</router-link> -
+    <router-link v-if="!currentUser" to="/register">Register</router-link>  - 
+    <router-link v-if="!currentUser" to="/login">Login</router-link> 
     <router-link v-if="currentUser" to="/login" @click="logout"
       >Logout</router-link
     >
