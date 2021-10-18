@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 <template>
   <h1>Login</h1>
   <div><input type="text" placeholder="Email" v-model="email" /></div>

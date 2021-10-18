@@ -2,8 +2,8 @@ import { createApp } from "vue";
 // @ts-ignore
 import App from "./App.vue";
 import { initializeApp } from "firebase/app";
-
-// TODO: Replace the following with your app's Firebase project configuration
+import router from "./router/index";
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCSvZLZ0X5OXVhhsGYV0NvtNmJOYLD_dRU",
   authDomain: "vue-portfolio-34c94.firebaseapp.com",
@@ -13,8 +13,13 @@ const firebaseConfig = {
   appId: "1:660409853528:web:4715b0a888d15aff224c2d",
 };
 
+// Initialize Firebase
 initializeApp(firebaseConfig);
 
-const app = createApp(App);
+let app;
 
-app.mount("#app");
+if (!app) {
+  app = createApp(App);
+  app.use(router);
+  app.mount("#app");
+}
